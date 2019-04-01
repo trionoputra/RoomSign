@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.trionoputra.roomsign.SignInActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:background="@drawable/icon_state"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:adjustViewBounds="true"
+        android:onClick="back"
+        android:layout_alignParentLeft="true"
+        app:srcCompat="@mipmap/ic_arrow_back_white_48dp" />
+
+
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:background="@android:color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/darker_gray"
+            android:hint="@string/hint_key"
+            android:textSize="30sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_blue"
+            android:layout_width="400dp"
+            android:layout_height="60dp"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:text="@string/login" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

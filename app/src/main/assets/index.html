@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='res/fullcalendar.css' rel='stylesheet' />
+<script src='res/moment.min.js'></script>
+<script src='res/jquery.min.js'></script>
+  <script src='res/stringy.js'></script>
+<script src='res/fullcalendar.js'></script>
+<script>
+  function initCalendar(event)
+  {
+    console.log(event);
+    $('#calendar').fullCalendar({
+        defaultView: 'month',
+        height: $(window).height()-16,
+        header: {
+              left: 'prev,next today',
+              center: 'title',
+              right: ''
+            },
+        events:event,
+        eventLimit:true,
+        timeFormat: 'H(:mm)',
+        eventClick: function(calEvent, jsEvent, view) {
+            console.log(calEvent);
+            var event  = {id:calEvent.id,
+                            division:calEvent.division,
+                            start:calEvent.start._i,
+                            end:(calEvent.end != null) ? calEvent.end._i : calEvent.start._i,
+                            pic:calEvent.pic,
+                            timeFrom:calEvent.timeFrom,
+                            timeTo:calEvent.timeTo,
+                            title:calEvent.title,
+                            ongoing:calEvent.ongoing,
+                            amount:calEvent.amount,
+                            email:calEvent.email
+                        };
+            Android.showDetail(JSON.stringify(event));
+        },
+        dayClick: function(date, jsEvent, view) {
+           Android.goToform(date.format())
+        }
+    });
+  }
+
+</script>
+</head>
+<style>
+html
+{
+  -webkit-tap-highlight-color:transparent;
+  -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   outline-style:none;
+}
+*:focus {
+    outline: none;
+}
+body
+{
+    margin:0;
+    padding:8px;
+
+}
+.fc-center
+{
+  margin-right: 140px !important;
+}
+</style>
+<body >
+
+  <div id='calendar'></div>
+
+</body>
+</html>

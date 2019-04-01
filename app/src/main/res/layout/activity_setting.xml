@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:keepScreenOn="true"
+tools:context="com.trionoputra.roomsign.settings.SettingActivity">
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    android:id="@+id/actionbar"
+    >
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:background="@drawable/icon_state"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:adjustViewBounds="true"
+        android:onClick="back"
+        app:srcCompat="@mipmap/ic_arrow_back_white_48dp" />
+
+    <TextView
+        android:id="@+id/toolbarTitle"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/white"
+        android:text="@string/settings" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@mipmap/icon" />
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:padding="8dp"
+        android:layout_toLeftOf="@+id/imageView3"
+        android:gravity="center|right"
+        android:orientation="vertical"
+        >
+        <TextClock
+            android:layout_width="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:format24Hour="HH:mm"
+            android:layout_height="wrap_content" />
+        <TextClock
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="-4dp"
+            android:textColor="@android:color/white"
+            android:format24Hour="EEEE, d MMM yyyy"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/btnSave"
+    android:layout_below="@+id/actionbar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/gray_rounded"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:text="@string/general" />
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:text="@string/refresh_time" />
+
+                        <EditText
+                            android:id="@+id/txtRefresh"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:inputType="number"
+                            android:hint="@string/hint_refresh_time"
+                            android:text="" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:text="@string/timeout_time" />
+
+                        <EditText
+                            android:id="@+id/txtTimout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:inputType="number"
+                            android:hint="@string/hint_timeout_time"
+                            android:text="" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:text="@string/max_book_day" />
+
+                        <EditText
+                            android:id="@+id/txtMaxDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:inputType="number"
+                            android:hint="@string/hint_max_book_day"
+                            android:text="" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:text="@string/max_book_time" />
+
+                        <EditText
+                            android:id="@+id/txtMaxTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:inputType="number"
+                            android:hint="@string/hint_max_book_time"
+                            android:text="" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/gray_rounded"
+            >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:text="@string/meeting_room_info" />
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp"
+                    android:text="@string/name" />
+
+                <EditText
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="20sp"
+                    android:inputType="textPersonName"
+                    android:hint="@string/hint_name"
+                    android:text="" />
+
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:text="@string/building" />
+
+                        <EditText
+                            android:id="@+id/txtBuilding"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:inputType="textPersonName"
+                            android:hint="@string/hint_building"
+                            android:text="" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:text="@string/floor" />
+
+                        <EditText
+                            android:id="@+id/txtFloor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:inputType="textPersonName"
+                            android:hint="@string/hint_floor"
+                            android:text="" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:text="@string/department" />
+
+                        <EditText
+                            android:id="@+id/txtDepartment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:inputType="textPersonName"
+                            android:hint="@string/hint_department"
+                            android:text="" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:text="@string/capacity" />
+
+                        <EditText
+                            android:id="@+id/txtCapacity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:inputType="number"
+                            android:hint="@string/hint_capacity"
+                            android:text="" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:text="@string/category" />
+
+                        <EditText
+                            android:id="@+id/txtCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:inputType="textPersonName"
+                            android:hint="@string/hint_category"
+                            android:text="" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:background="@drawable/gray_rounded"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:text="@string/security" />
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:text="@string/password" />
+
+
+
+
+
+                        <EditText
+                            android:id="@+id/txtPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textSize="20sp"
+                            android:inputType="numberPassword"
+                            android:hint="@string/hint_password"
+                            android:text="" />
+
+
+                        <TextView
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:text="@string/booking_status_label" />
+
+                        <RadioGroup
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/grupStatus"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="match_parent" >
+
+                            <RadioButton
+                                android:id="@+id/radioEnable"
+                                android:layout_width="wrap_content"
+                                android:checked="true"
+                                android:layout_height="wrap_content"
+                                android:text="Enable" />
+
+                            <RadioButton
+                                android:id="@+id/radioDisable"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disable" />
+                        </RadioGroup>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+<Button
+    android:id="@+id/btnSave"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:textColor="@android:color/white"
+    android:textStyle="bold"
+    android:text="@string/save"
+    android:textSize="24dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/btn_blue"/>
+
+
+</RelativeLayout>

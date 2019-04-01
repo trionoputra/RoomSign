@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context="com.trionoputra.roomsign.CalendarActivity">
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:id="@+id/actionbar"
+        >
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:background="@drawable/icon_state"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:adjustViewBounds="true"
+            android:onClick="back"
+            app:srcCompat="@mipmap/ic_arrow_back_white_48dp" />
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@mipmap/icon" />
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:padding="8dp"
+            android:layout_toLeftOf="@+id/imageView3"
+            android:gravity="center|right"
+            android:orientation="vertical"
+            >
+            <TextClock
+                android:id="@+id/textClock"
+                android:layout_width="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@android:color/white"
+                android:format24Hour="HH:mm"
+                android:layout_height="wrap_content" />
+            <TextClock
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginTop="-4dp"
+                android:textColor="@android:color/white"
+                android:format24Hour="EEEE, d MMM yyyy"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_below="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>

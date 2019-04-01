@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">ROOM SIGN</string>
+    <string name="meeting_room_info">Meeting Room Info</string>
+    <string name="booking_status">Schedule</string>
+    <string name="booking">Booking</string>
+    <string name="book">BOOK</string>
+    <string name="save">SAVE</string>
+    <string name="title">TITLE</string>
+    <string name="date">DATE</string>
+    <string name="start_date">START DATE</string>
+    <string name="end_date">END DATE</string>
+    <string name="fromtime">START TIME</string>
+    <string name="totime">END TIME</string>
+    <string name="time">TIME</string>
+    <string name="pic">PIC</string>
+    <string name="division">DEPARTMENT</string>
+    <string name="email">EMAIL</string>
+    <string name="amount">NUMBER OF PARTICIPANTS</string>
+    <string name="hint_title">enter meeting title</string>
+    <string name="hint_pic">enter PIC name</string>
+    <string name="hint_division">enter PIC department</string>
+    <string name="hint_email">enter PIC email</string>
+    <string name="hint_amount">enter number of participants</string>
+    <string name="error_empty_field">field can\'t be empty</string>
+    <string name="error_invalid_integer">invalid integer value</string>
+    <string name="error_max_booking">exceed maximum booking time, %1$d minutes</string>
+    <string name="error_empty_general_field">general info can\'t be empty</string>
+    <string name="error_empty_meeting_field">meetting room field can\'t be empty</string>
+    <string name="error_password_field">password at least 4 digits</string>
+    <string name="data_updated">data updated</string>
+    <string name="error_invalid_email">invalid email address</string>
+    <string name="error">ups something error, please close and reopen the apps</string>
+    <string name="error_backdate">booking can\'t back date</string>
+    <string name="error_7day_ahead">booking can only be %1$d days ahead</string>
+    <string name="book_success">Room successfully booked</string>
+    <string name="confirm_delete">You will lose your data!</string>
+    <string name="error_backtime">Booking time can\'t lower than current time</string>
+    <string name="error_endtime">Booking start time can\'t lower than end time</string>
+    <string name="error_already_book">Meeting room already booked at selected time</string>
+    <string name="ok">OK</string>
+    <string name="yes">YES</string>
+    <string name="close">CLOSE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="no_booking_data">no booking data</string>
+    <string name="booking_confirmation">Booking for:\n\nTitle : %1$s \nDate : %2$s \nTime : %3$s - %4$s \nPIC : [%6$s] %5$s \nEmail  : %8$s \nParticipant  : %7$s person\n\n  </string>
+    <string name="booking_confirmation_2">Booking for:\n\nTitle : %1$s \nDate From : %2$s %3$s \nDate From : %4$s %5$s \nPIC : [%6$s] %7$s \nEmail  : %8$s \nParticipant  : %9$s person\n\n  </string>
+    <string name="event_detail">Event Details</string>
+    <string name="person">person</string>
+    <string name="name">NAME</string>
+    <string name="building">BUILDING</string>
+    <string name="floor">FLOOR</string>
+    <string name="department">DEPARTMENT</string>
+    <string name="capacity">CAPACITY</string>
+    <string name="category">CATEGORY</string>
+    <string name="room_available">ROOM AVAILABLE</string>
+    <string name="press_book">press BOOKING button to make a booking</string>
+    <string name="app_title">Meeting Room Management System</string>
+
+    <string name="login">LOGIN</string>
+    <string name="hint_password">enter password</string>
+    <string name="hint_key">enter key</string>
+    <string name="error_password">invalid password</string>
+    <string name="error_key">invalid key</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="settings">SETTINGS</string>
+
+    <string name="error_booking_disable">Booking menu disable for this time</string>
+
+    <string name="hint_name">enter name</string>
+    <string name="hint_building">enter building name</string>
+    <string name="hint_floor">enter floor</string>
+    <string name="hint_capacity">enter capacity</string>
+    <string name="hint_category">enter category</string>
+    <string name="hint_department">enter department</string>
+
+    <string name="general">General Info</string>
+    <string name="refresh_time">REFRESH TIME (*minutes)</string>
+    <string name="timeout_time">SCREEN TIMEOUT(*minutes)</string>
+
+    <string name="max_book_day">MAX BOOK DAY (*days)</string>
+    <string name="max_book_time">MAX BOOK TIME (*minutes)</string>
+
+    <string name="hint_max_book_day">enter max book day</string>
+    <string name="hint_max_book_time">enter max book time</string>
+
+    <string name="hint_refresh_time">enter refresh time</string>
+    <string name="hint_timeout_time">enter timeout</string>
+    <string name="password">PASSWORD</string>
+    <string name="booking_status_label">BOOKING STATUS</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="security">Security</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+
+</resources>

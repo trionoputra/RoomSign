@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="0dp"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/bullet"
+        android:background="@drawable/red_circle"
+        android:layout_width="15dp"
+        android:layout_height="15dp"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/bullet"
+        android:layout_toRightOf="@+id/bullet"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="-4dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/bullet"
+        android:layout_toRightOf="@+id/bullet"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/textView1"
+        android:textSize="16sp"
+        android:textColor="@color/dark_gray"
+        android:text="00:00 - 00:00" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="16sp"
+        android:layout_below="@+id/textView1"
+        android:textColor="@color/black"
+        android:text="[IT]Pak Yudha/10 person" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/bullet"/>
+
+
+
+</RelativeLayout>

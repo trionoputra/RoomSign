@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:filterTouchesWhenObscured="true"
+    tools:context="com.trionoputra.roomsign.MainActivity">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:id="@+id/actionbar"
+        >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:longClickable="true"
+            app:srcCompat="@mipmap/icon" />
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:padding="8dp"
+            android:layout_toLeftOf="@+id/imageView3"
+            android:gravity="center|right"
+            android:orientation="vertical"
+            >
+            <TextClock
+                android:id="@+id/textClock"
+                android:layout_width="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@android:color/white"
+                android:format24Hour="HH:mm"
+                android:timeZone="GMT+0700"
+                android:format12Hour="@null"
+                android:layout_height="wrap_content" />
+            <TextClock
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginTop="-4dp"
+                android:textColor="@android:color/white"
+                android:format24Hour="EEEE, d MMM yyyy"
+                android:timeZone="GMT+0700"
+                android:format12Hour="@null"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:weightSum="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/actionbar"
+        android:id="@+id/linearLayout2">
+
+        <RelativeLayout
+            android:id="@+id/headerWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                app:srcCompat="@mipmap/bg_1" />
+            <View android:layout_width="match_parent"
+                android:alpha="0.7"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:textSize="60sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="AGILITY AGILITY 1"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.85"
+            android:layout_below="@+id/headerWrapper"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/containerLeft"
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="match_parent"
+                android:background="#000">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@mipmap/bg_3" />
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="64dp"
+                    android:gravity="center_vertical|left">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="40sp"
+                        android:gravity="left"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/txtTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:textSize="35sp"
+                        android:gravity="left"
+                        android:text="" />
+
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/containerRight"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/txtnodata"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="30sp"
+                    android:layout_margin="16dp"
+                    android:text="@string/no_booking_data"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:layout_above="@+id/buttonWrapper"
+                    />
+
+                <LinearLayout
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/buttonWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:background="@color/colorPrimary">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:padding="4dp"
+                        android:id="@+id/btnInfo"
+                        android:onClick="MenuOnClick"
+                        android:background="@drawable/icon_state"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/ic_pageview_white_48dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:text="@string/meeting_room_info" />
+
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:background="@drawable/icon_state"
+                        android:padding="4dp"
+                        android:id="@+id/btnStatus"
+                        android:onClick="MenuOnClick"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/ic_event_note_white_48dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:text="@string/booking_status" />
+
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:background="@drawable/icon_state"
+                        android:padding="4dp"
+                        android:id="@+id/btnBooking"
+                        android:onClick="MenuOnClick"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/ic_event_available_white_48dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:text="@string/booking" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

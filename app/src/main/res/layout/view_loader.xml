@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout android:layout_width="90dp"
+        android:layout_height="90dp" android:background="@drawable/blue_circle"
+        android:padding="8dp">
+
+        <com.trionoputra.roomsign.widget.GifView
+            android:id="@+id/loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            custom:gif="@mipmap/loader" />
+
+    </RelativeLayout>
+
+</LinearLayout>
