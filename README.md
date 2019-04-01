@@ -22,5 +22,7 @@ Stand alone meeting room signage and Room Booking app for android tablets
 - Setting configuration
 - Open Source
 
+`To enter the settings menu just click and hold the meeting room logo on the top right then enter password '123456' `
+
 ### Libraries
 * [Sugar ORM](http://satyan.github.io/sugar/)
