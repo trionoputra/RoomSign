@@ -10,8 +10,8 @@ public class Constant {
     public static final int DEFAULT_TIMER_ACTIVITY = 5;
     public static final int DEFAULT_MAX_BOOKING_TIME = 120; // minutes
     public static final int DEFAULT_MAX_BOOKING_DAY = 7; // day
-    public static final String DEFAULT_PASSWORD = "123321";
-    public static final String DEFAULT_SN = "123321";
+    public static final String DEFAULT_PASSWORD = "123456";
+    public static final String DEFAULT_SN = "123456";
 
     public static final String DEFAULT_ROOM_NAME = "WAR ROOM";
     public static final String DEFAULT_ROOM_BUILDING = "SMART BUILDING";
