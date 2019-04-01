@@ -26,3 +26,4 @@ Stand alone meeting room signage and Room Booking app for android tablets
 
 ### Libraries
 * [Sugar ORM](http://satyan.github.io/sugar/)
+* [FullCalendar](https://fullcalendar.io)
