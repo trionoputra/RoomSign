@@ -1,4 +1,4 @@
-# RoomSign
+# RoomSign Android
 
 Stand alone meeting room signage and Room Booking app for android tablets
 
